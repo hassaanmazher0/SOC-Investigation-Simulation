@@ -28,7 +28,7 @@
 **Goal:** Confirm the target is online before scanning.
 
 **Simple ICMP ping sweep — just checking if host responds**
-nmap -sn 192.168.1.X
+- nmap -sn 192.168.1.X
 
 **What this does:**
 - Sends ICMP echo requests (ping)
