@@ -2,12 +2,12 @@
 > identify open ports and services, confirm vulnerability to MS17-010,
 > and observe how Wazuh detects scanning activity.
 
-Steps: 
-1.1 → Host Discovery (is the target alive?) 
-1.2 → SYN Scan (what ports are open?) 
-1.3 → Service Detection (what is running on each port?) 
-1.4 → Aggressive Scan (OS, scripts, traceroute) 
-1.5 → Vulnerability Scan (is MS17-010 present?) 
+**Steps:** 
+- 1.1 → Host Discovery (is the target alive?) 
+- 1.2 → SYN Scan (what ports are open?) 
+- 1.3 → Service Detection (what is running on each port?) 
+- 1.4 → Aggressive Scan (OS, scripts, traceroute) 
+- 1.5 → Vulnerability Scan (is MS17-010 present?) 
 
 
 ## Environment at This Phase
