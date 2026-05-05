@@ -83,6 +83,51 @@
 - This is all the information an attacker needs to select the right exploit.
 
 
+## Step 1.4 — OS Detection + Aggressive Scan
+
+**Goal: Confirm target OS and extract maximum information.**
+
+- -A = enables OS detection + version + scripts + traceroute
+- -T4 = aggressive timing (faster — more detectable)
+- sudo nmap -A -T4 192.168.1.X -oN evidence/nmap_aggressive_scan.txt
+
+**What this does:**
+- OS fingerprinting via TCP/IP stack behaviour analysis
+- Runs a larger set of NSE scripts
+- Performs traceroute
+- This is the loudest scan — generates significant traffic
+- Wazuh will have multiple alerts by the time this finishes
+
+**Key Finding:**
+- OS confirmed as Windows 7 SP1.
+- Computer name: WINDOWS7-VM — matches our Wazuh agent name.
+- This is exactly the information an attacker logs before moving to exploitation.
+
+
+  ## Step 1.5 — Vulnerability Scan
+
+  **Goal: Confirm the target is vulnerable to known CVEs — specifically MS17-010.**
+
+- --script vuln = runs all Nmap vulnerability detection scripts
+- sudo nmap --script vuln 192.168.1.X -oN evidence/nmap_vuln_scan.txt
+
+**What this does:**
+- Runs NSE scripts from the "vuln" category
+- Tests for known vulnerabilities including MS17-010
+- Does NOT exploit — only checks for vulnerability indicators
+- This is the loudest and slowest scan in your recon toolkit
+
+**Key Finding — CRITICAL:**
+- Target is confirmed vulnerable to MS17-010 (EternalBlue).
+- This is the exploit that was used in WannaCry and NotPetya ransomware attacks.
+- CVSS Score: 9.3 — Critical severity.
+- The target has no patch applied.
+
+
+
+
+
+
 
 
 
