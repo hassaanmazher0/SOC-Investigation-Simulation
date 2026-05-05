@@ -46,9 +46,9 @@
 
 **Goal: Identify all open TCP ports on the target.**
 
-# -sS = SYN scan (half-open — never completes handshake)
-# -oN = save output to file (always save your evidence)
-# sudo nmap -sS 192.168.1.X -oN evidence/nmap_syn_scan.txt
+-sS = SYN scan (half-open — never completes handshake)
+-oN = save output to file (always save your evidence)
+- sudo nmap -sS 192.168.1.X -oN evidence/nmap_syn_scan.txt
 
 **What this does:**
 - Sends a TCP SYN packet to each port
@@ -67,9 +67,9 @@
 
 **Goal: Identify exactly what software is running on each open port.**
 
-# -sV = version detection (banner grabbing + probing)
-# -sC = default NSE scripts (extra enumeration)
-# sudo nmap -sV -sC 192.168.1.X -oN evidence/nmap_service_scan.txt
+-sV = version detection (banner grabbing + probing)
+-sC = default NSE scripts (extra enumeration)
+- sudo nmap -sV -sC 192.168.1.X -oN evidence/nmap_service_scan.txt
 
 **What this does:**
 - Probes each open port with protocol-specific requests
