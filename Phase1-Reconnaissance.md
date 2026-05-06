@@ -127,23 +127,23 @@
 ## BEFORE MOVING TO PHASE 2 — CONFIRM YOU HAVE:
 
 **Scan Output Files:**
-├── ☐ evidence/nmap_syn_scan.txt         (Step 1.2)
-├── ☐ evidence/nmap_service_scan.txt     (Step 1.3)
-├── ☐ evidence/nmap_aggressive_scan.txt  (Step 1.4)
-└── ☐ evidence/nmap_vuln_scan.txt        (Step 1.5)
+- evidence/nmap_syn_scan.txt         (Step 1.2)
+- evidence/nmap_service_scan.txt     (Step 1.3)
+- evidence/nmap_aggressive_scan.txt  (Step 1.4)
+- evidence/nmap_vuln_scan.txt        (Step 1.5)
 
 **Screenshots:**
-├── ☐ Nmap output showing port 445 open
-├── ☐ MS17-010 vulnerability confirmed in vuln scan
-├── ☐ Wazuh security events showing scan alerts
-└── ☐ Wazuh MITRE ATT&CK view showing T1046
+- Nmap output showing port 445 open
+- MS17-010 vulnerability confirmed in vuln scan
+- Wazuh security events showing scan alerts
+- Wazuh MITRE ATT&CK view showing T1046
 
 **Key Information Documented:**
-├── ☐ Windows 7 VM IP address noted
-├── ☐ Open ports listed (135, 139, 445, 3389 expected)
-├── ☐ OS version confirmed (Windows 7 SP1)
-├── ☐ CVE-2017-0144 confirmed VULNERABLE
-└── ☐ Wazuh alert timestamps recorded
+- Windows 7 VM IP address noted
+- Open ports listed (135, 139, 445, 3389 expected)
+- OS version confirmed (Windows 7 SP1)
+- CVE-2017-0144 confirmed VULNERABLE
+- Wazuh alert timestamps recorded
 
 
 
